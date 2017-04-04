@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78626b01-0703-4fb2-976d-0a42968a48bf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Presentation/Controller/AddTrackPageController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Presentation/Model/TrackModel.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/database.properties" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../DEA CASUS SCRIPT VODAGONE.sql" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../DEA Onderzoeksrapport.docx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../DEA VODAGONE VERSLAG.docx" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Programmeeropdracht DEA ege saraydar 547873 herkansing VodaGone.zip" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Spotitube_war_exploded/WEB-INF/classes/Spotitube/App.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Spotitube/App.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../VodaGoneProject/.idea/.name" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../VodaGoneProject/.idea/artifacts/PO_EAI_war.xml" afterPath="" />
@@ -245,15 +246,12 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../insert script VODAGONE.sql" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../insert testdata again.sql" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../package diagramo.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/Abonnementen.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/PlaylistView.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/DienstUitproberen.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/AddTrackView.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Spotitube-1.0.war" afterPath="$PROJECT_DIR$/target/Spotitube-1.0.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spotitube.iml" afterPath="$PROJECT_DIR$/Spotitube.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Data_Source/TrackDAO.java" afterPath="$PROJECT_DIR$/src/main/java/Data_Source/TrackDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Availability.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Availability.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Playlist.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Playlist.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Song.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Song.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Track.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Track.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Domain/Video.java" afterPath="$PROJECT_DIR$/src/main/java/Domain/Video.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -279,6 +277,26 @@
                 <element signature="e#177#178#0" expanded="true" />
                 <element signature="e#233#234#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTrackPageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presentation/Controller/AddTrackPageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presentation/Model/TrackModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -337,11 +355,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Track.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Track.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Track.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
-              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#432#433#0" expanded="true" />
                 <element signature="e#464#465#0" expanded="true" />
@@ -384,16 +402,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Service/PlaylistService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PlaylistDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Data_Source/PlaylistDAO.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -403,21 +411,6 @@
                 <element signature="imports" expanded="true" />
                 <element signature="method#save#0;class#PlaylistDAO#0" expanded="false" />
                 <element signature="method#delete#0;class#PlaylistDAO#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrackDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Data_Source/TrackDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-              <folding>
-                <element signature="e#136#137#0" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1244,7 +1237,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491297034856</updated>
-      <workItem from="1491297037849" duration="4486000" />
+      <workItem from="1491297037849" duration="4955000" />
     </task>
     <task id="LOCAL-00001" summary="niggu">
       <created>1491298923324</created>
@@ -1274,15 +1267,22 @@
       <option name="project" value="LOCAL" />
       <updated>1491301378663</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="class diagram implementation">
+      <created>1491302015101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1491302015101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4486000" />
+    <option name="totallyTimeSpent" value="4955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1308,7 +1308,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24114583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24114583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1330,7 +1330,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="niggu" />
     <MESSAGE value="new classes + functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes + functions" />
+    <MESSAGE value="class diagram implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="class diagram implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1438,17 +1439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Availability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#177#178#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Playlist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1478,7 +1468,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Track.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#432#433#0" expanded="true" />
             <element signature="e#464#465#0" expanded="true" />
@@ -1497,6 +1487,33 @@
             <element signature="e#926#927#0" expanded="true" />
             <element signature="e#966#967#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Domain/Availability.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presentation/Controller/AddTrackPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presentation/Model/TrackModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

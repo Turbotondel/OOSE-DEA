@@ -51,5 +51,5 @@ public class Track {
     public void setDuration(long duration) {
         this.duration = duration;
     }
-    
+
 }
