@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-jetty:${jersey.version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/test-framework/providers/jersey-test-framework-provider-jetty/${jersey.version}/jersey-test-framework-provider-jetty-${jersey.version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/test-framework/providers/jersey-test-framework-provider-jetty/${jersey.version}/jersey-test-framework-provider-jetty-${jersey.version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/test-framework/providers/jersey-test-framework-provider-jetty/${jersey.version}/jersey-test-framework-provider-jetty-${jersey.version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
