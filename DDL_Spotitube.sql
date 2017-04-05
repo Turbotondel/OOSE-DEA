@@ -24,6 +24,8 @@ CREATE TABLE Song (
     album				varchar(255)	NOT NULL,
     PRIMARY KEY			(performer, title),
     FOREIGN KEY			(performer, title) REFERENCES Track(performer, title)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 );
 
 CREATE TABLE Video (
@@ -34,6 +36,8 @@ CREATE TABLE Video (
     description			varchar(512)	NOT NULL,
     PRIMARY KEY			(performer, title),
     FOREIGN KEY			(performer, title) REFERENCES Track(performer, title)
+	ON UPDATE CASCADE
+    ON DELETE CASCADE
 );
 
 CREATE TABLE Availability (
@@ -42,6 +46,8 @@ CREATE TABLE Availability (
 	offlineAvailable	boolean			NOT NULL,
     PRIMARY KEY			(performer, title),
     FOREIGN KEY			(performer, title) REFERENCES Track(performer, title)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE
 );
 
 CREATE TABLE TrackinPlaylist(
@@ -50,6 +56,10 @@ CREATE TABLE TrackinPlaylist(
 	owner				varchar(255)	NOT NULL,
     name				varchar(255)	NOT NULL,
     PRIMARY KEY 		(performer, title, owner, name),
-	FOREIGN KEY			(performer, title) REFERENCES Track(performer, title),
+	FOREIGN KEY			(performer, title) REFERENCES Track(performer, title)
+    ON UPDATE CASCADE
+    ON DELETE CASCADE,
     FOREIGN KEY			(owner, name) REFERENCES Playlist(owner, name)
+	ON UPDATE CASCADE
+    ON DELETE CASCADE
 )

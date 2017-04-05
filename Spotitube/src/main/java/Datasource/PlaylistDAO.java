@@ -19,9 +19,9 @@ public class PlaylistDAO {
     private TrackDAO trackDao = new TrackDAO();
 
 
-    public List<Playlist> getAllPlaylist() {
+    public List<Playlist> getAllPlaylist() {    //getallplaylist
         con = new DatabaseConnect().getDBConnect();
-        List<Playlist> list = new ArrayList<>();
+        List<Playlist> list = new ArrayList<Playlist>();
         ResultSet result = null;
         try {
             result = con.prepareStatement("SELECT * FROM playlist").executeQuery();
@@ -43,8 +43,7 @@ public class PlaylistDAO {
     }
 
 
-
-    public List<Playlist> findByOwner(String owner) {
+    public List<Playlist> findByOwner(String owner) { //zoek op owner
         con = new DatabaseConnect().getDBConnect();
         List<Playlist> list = new ArrayList<Playlist>();
         ResultSet result = null;
@@ -67,7 +66,7 @@ public class PlaylistDAO {
 
     }
 
-    public List<Playlist> findByName(String name) {
+    public List<Playlist> findByName(String name) { //zoek op name
         con = new DatabaseConnect().getDBConnect();
         List<Playlist> list = new ArrayList<Playlist>();
         ResultSet result = null;
@@ -91,14 +90,9 @@ public class PlaylistDAO {
     }
 
 
-    public void addTrackToPlaylist(Track track, Playlist playlist) {
+    public void addTrackToPlaylist(Track track, Playlist playlist) {    //add
 
         con = new DatabaseConnect().getDBConnect();
-
-       /*performer track
-                title track
-                        owner playlist
-                        name playlist*/
 
         try {
             con.prepareStatement("INSERT INTO TrackinPlaylist VALUES('" + track.getPerformer()+ "', '" + track.getTitle() + "', '" + playlist.getOwner() + "', " + playlist.getName() + ")" );
@@ -106,20 +100,32 @@ public class PlaylistDAO {
             e.printStackTrace();
         }
 
+    }
+
+    public void deleteTrackFromPlaylist(Track track, Playlist playlist) {   //delete
+
+        con = new DatabaseConnect().getDBConnect();
+
+        try {
+            con.prepareStatement("DELETE FROM TrackinPlaylist WHERE performer = '" +track.getPerformer()+ "' AND title = '" +track.getTitle()+ "' AND owner = '" + playlist.getOwner() + "' AND name = '" + playlist.getName() + "'");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
-
-    public List list(){
-        return null;
-    };
 
 
     public void save(Playlist playlist){
 
     }
 
-    public void delete(int playListId){
-    }
 
 }
+
+
+performer
+title
+    owner
+
+name

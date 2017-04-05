@@ -5,11 +5,10 @@ package Domain;
  */
 public class Track {
 
-
     private String performer;
     private String title;
     private String url;
-    private long duration;
+    private float duration;
 
 
     public Track(String performer, String title, String url, long duration) {
@@ -44,7 +43,7 @@ public class Track {
         this.url = url;
     }
 
-    public long getDuration() {
+    public float getDuration() {
         return duration;
     }
 
