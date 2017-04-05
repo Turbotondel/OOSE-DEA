@@ -43,7 +43,6 @@ public class PlaylistDAO {
     }
 
 
-
     public List<Playlist> findByOwner(String owner) { //zoek op owner
         con = new DatabaseConnect().getDBConnect();
         List<Playlist> list = new ArrayList<Playlist>();
@@ -108,7 +107,7 @@ public class PlaylistDAO {
         con = new DatabaseConnect().getDBConnect();
 
         try {
-            con.prepareStatement("DELETE FROM TrackinPlaylist VALUES('" + track.getPerformer()+ "', '" + track.getTitle() + "', '" + playlist.getOwner() + "', " + playlist.getName() + ")" );
+            con.prepareStatement("DELETE FROM TrackinPlaylist WHERE performer = '" +track.getPerformer()+ "' AND title = '" +track.getTitle()+ "' AND owner = '" + playlist.getOwner() + "' AND name = '" + playlist.getName() + "'");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -123,3 +122,10 @@ public class PlaylistDAO {
 
 
 }
+
+
+performer
+title
+    owner
+
+name
