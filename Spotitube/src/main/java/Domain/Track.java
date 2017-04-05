@@ -11,7 +11,7 @@ public class Track {
     private float duration;
 
 
-    public Track(String performer, String title, String url, long duration) {
+    public Track(String performer, String title, String url, float duration) {
         this.performer = performer;
         this.title = title;
         this.url = url;

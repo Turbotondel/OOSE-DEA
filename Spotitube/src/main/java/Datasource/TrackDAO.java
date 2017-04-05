@@ -5,6 +5,7 @@ import Domain.Playlist;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class TrackDAO {
 
     public List<Playlist> insertVideo(String name, String) {
         con = new DatabaseConnect().getDBConnect();
-        List<Playlist> list = new ArrayList<>();
+        List<Playlist> list = new ArrayList<Playlist>();
         ResultSet result = null;
         try {
             result = con.prepareStatement("SELECT * FROM playlist WHERE name LIKE '%" + name + "%'").executeQuery();

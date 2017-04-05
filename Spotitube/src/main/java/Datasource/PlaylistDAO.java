@@ -29,16 +29,33 @@ public class PlaylistDAO {
         }
         try {
             while (result.next()) {
-
                 Playlist playlist = new Playlist(result.getString("owner"), result.getString("name"));
                 list.add(playlist);
-
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return list;
 
+    }
+
+    public Playlist findPlaylist(String owner, String name) { //MAG MAAR 1 RECORD OPLEVEREN
+        con = new DatabaseConnect().getDBConnect();
+        ResultSet result = null;
+        try {
+            result = con.prepareStatement("SELECT * FROM playlist WHERE owner = '" + owner + "' AND naam = '" + name + "'").executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        Playlist playlist = null;
+        try {
+            playlist = new Playlist(result.getString("owner"), result.getString("name"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return playlist;
     }
 
 
@@ -87,6 +104,28 @@ public class PlaylistDAO {
         return list;
 
     }
+
+
+
+    public Track getTrackFromPlaylist(Playlist playlist, String owner, String name) { //MAG MAAR 1 RECORD OPLEVEREN
+        con = new DatabaseConnect().getDBConnect();
+        ResultSet result = null;
+        try {
+            result = con.prepareStatement("SELECT * FROM playlist WHERE owner LIKE '%" + owner + "%' AND naam LIKE '%" + name + "%'").executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            playlist = new Playlist(result.getString("owner"), result.getString("name"));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return track;
+
+    }
+
 
     public List<Track> getAllTracksInPlaylist(Playlist playlist) { //laat inhoud van playlist zien
         con = new DatabaseConnect().getDBConnect();
