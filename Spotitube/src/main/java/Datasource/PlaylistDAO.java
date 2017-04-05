@@ -16,6 +16,7 @@ import java.util.List;
 public class PlaylistDAO {
 
     private Connection con;
+    private TrackDAO trackDAO = new TrackDAO();
 
     public List<Playlist> getAllPlaylist() {    //getallplaylist
         con = new DatabaseConnect().getDBConnect();
@@ -87,20 +88,20 @@ public class PlaylistDAO {
 
     }
 
-    public List<Track> getTracksInPlaylist(Playlist playlist) { //laat inhoud van playlist zien
+    public List<Track> getAllTracksInPlaylist(Playlist playlist) { //laat inhoud van playlist zien
         con = new DatabaseConnect().getDBConnect();
-        List<Playlist> list = new ArrayList<Playlist>();
+        List<Track> list = new ArrayList<Track>();
         ResultSet result = null;
         try {
-            result = con.prepareStatement("SELECT * FROM TrackinPlaylist WHERE name LIKE '%" + playlist.getName() + "%' AND owner LIKE '%"+ playlist.getOwner() +"'%").executeQuery();
+            result = con.prepareStatement("SELECT TP.performer, TP.title, T.url, T.duration FROM TrackinPlaylist TP INNER JOIN Track T ON TP.performer  = T.performer AND TP.title = T.title WHERE name LIKE '%" + playlist.getName() + "%' AND owner LIKE '%"+ playlist.getOwner() + "%'").executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
         try {
             while (result.next()) {
 
-                Playlist playlist = new Playlist(result.getString("owner"), result.getString("name"));
-                list.add(playlist);
+                Track track = new Track(result.getString("performer"), result.getString("title"), result.getString("url"), result.getFloat("duration"));
+                list.add(track);
 
             }
         } catch (SQLException e) {
@@ -150,10 +151,3 @@ public class PlaylistDAO {
 
 
 }
-
-/*
-    performer
-            title
-    owner
-
-            name*/
