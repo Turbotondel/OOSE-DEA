@@ -16,8 +16,6 @@ import java.util.List;
 public class PlaylistDAO {
 
     private Connection con;
-    private TrackDAO trackDao = new TrackDAO();
-
 
     public List<Playlist> getAllPlaylist() {    //getallplaylist
         con = new DatabaseConnect().getDBConnect();
@@ -89,6 +87,28 @@ public class PlaylistDAO {
 
     }
 
+    public List<Track> getTracksInPlaylist(Playlist playlist) { //laat inhoud van playlist zien
+        con = new DatabaseConnect().getDBConnect();
+        List<Playlist> list = new ArrayList<Playlist>();
+        ResultSet result = null;
+        try {
+            result = con.prepareStatement("SELECT * FROM TrackinPlaylist WHERE name LIKE '%" + playlist.getName() + "%' AND owner LIKE '%"+ playlist.getOwner() +"'%").executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            while (result.next()) {
+
+                Playlist playlist = new Playlist(result.getString("owner"), result.getString("name"));
+                list.add(playlist);
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+
+    }
 
     public void addTrackToPlaylist(Track track, Playlist playlist) {    //add
 
@@ -115,17 +135,25 @@ public class PlaylistDAO {
     }
 
 
+    public void deletePlaylist(Playlist playlist) {   //delete complete playlist
 
-    public void save(Playlist playlist){
+        con = new DatabaseConnect().getDBConnect();
+
+        try {
+            con.prepareStatement("DELETE FROM Playlist WHERE name = '" +playlist.getName()+ "' AND owner = '" +playlist.getOwner()+ "'" );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
 
+
 }
 
-
-performer
-title
+/*
+    performer
+            title
     owner
 
-name
+            name*/
