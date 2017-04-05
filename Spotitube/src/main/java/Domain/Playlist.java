@@ -5,20 +5,39 @@ package Domain;
  */
 public class Playlist {
 
-    public Playlist() {
+    private String owner;
+    private String name;
+
+    public Playlist(String owner, String name) {
+        this.owner = owner;
+        this.name = name;
     }
 
-    private String owner(){
-        return "";
+    public void addTrack(Track track){
+
+
+    };
+
+    public void changeName(String name){
+
+
+    };
+
+    public String getOwner() {
+        return owner;
     }
 
-    private String name(){
-        return "";
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
-    public void addTrack(Track track){};
+    public String getName() {
+        return name;
+    }
 
-    public void changeName(String name){};
+    public void setName(String name) {
+        this.name = name;
+    }
 
 
 }
