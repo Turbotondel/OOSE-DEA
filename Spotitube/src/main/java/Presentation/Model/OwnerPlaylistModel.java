@@ -1,10 +1,10 @@
 package Presentation.Model;
 
-import Domain.Playlist;
-import Service.PlaylistService;
+        import Domain.Playlist;
+        import Service.PlaylistService;
 
-import java.util.ArrayList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.List;
 
 /**
  * Created by nymtes on 5-4-2017.

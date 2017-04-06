@@ -18,7 +18,7 @@ public class PlaylistModel {
    private float duration;
    private List<Track> tracks;
 
-    
+
     public PlaylistModel(String naam, String owner) {
         this.naam = naam;
         this.owner = owner;

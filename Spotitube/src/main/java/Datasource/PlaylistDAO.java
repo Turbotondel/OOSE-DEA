@@ -107,22 +107,24 @@ public class PlaylistDAO {
 
 
 
-    public Track getTrackFromPlaylist(Playlist playlist, String owner, String name) { //MAG MAAR 1 RECORD OPLEVEREN
+    public Track getTrackFromPlaylist(Playlist playlist, Track track) { //MAG MAAR 1 RECORD OPLEVEREN
         con = new DatabaseConnect().getDBConnect();
         ResultSet result = null;
         try {
-            result = con.prepareStatement("SELECT * FROM playlist WHERE owner LIKE '%" + owner + "%' AND naam LIKE '%" + name + "%'").executeQuery();
+            result = con.prepareStatement("SELECT * FROM playlist WHERE owner = '" + playlist.getOwner() + "' AND naam = '" + playlist.getName() + "' AND performer = '" + track.getPerformer() + "' AND title = '" + track.getPerformer() + "'").executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+
+        Track returnTrack = null;
         try {
-            playlist = new Playlist(result.getString("owner"), result.getString("name"));
+            returnTrack = new Track(result.getString("performer"), result.getString("title"), result.getString("url"), result.getFloat("duration"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return track;
+        return returnTrack;
 
     }
 
