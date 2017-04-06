@@ -19,7 +19,7 @@ public interface PlaylistService {
 
     void addTrackToPlaylist(String trackPerformer, String title, String playlistNaam, String owner);
 
-    void deleteTracksFromPlaylist(String trackPerformer, String title, String playlistNaam, String owner);
+    void deleteTrackFromPlaylist(String trackPerformer, String title, String playlistNaam, String owner);
 
     void deletePlaylist(String playlistNaam, String owner);
 }

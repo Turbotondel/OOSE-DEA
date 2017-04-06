@@ -39,14 +39,14 @@ public class LocalPlaylistService implements PlaylistService{
         playlistDAO.addTrackToPlaylist(track, playlist);
     }
 
-    public void deleteTracksFromPlaylist(String trackPerformer, String title, String playlistNaam, String owner) {
-        Playlist playlist = playlistDAO.findPlaylist(owner, playlistNaam);
-        Track track = playlistDAO.getTrackFromPlaylist(playlist, trackPerformer, title);
-        playlistDAO.deleteTrackFromPlaylist(track, playlist);
+    public void deleteTrackFromPlaylist(String trackPerformer, String title, String playlistNaam, String owner) {
+        Playlist list = playlistDAO.findPlaylist(owner, playlistNaam);
+        Track tempTrack = playlistDAO.getTrackFromPlaylist(list, trackDAO.findTrack(trackPerformer, title));
+        playlistDAO.deleteTrackFromPlaylist(tempTrack, list);
     }
 
     public void deletePlaylist(String playlistNaam, String owner) {
-        Playlist playlist = playlistDAO.findPlaylist(owner, playlistNaam);
-        playlistDAO.deletePlaylist(playlist);
+        Playlist list = playlistDAO.findPlaylist(owner, playlistNaam);
+        playlistDAO.deletePlaylist(list);
     }
 }

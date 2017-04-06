@@ -63,17 +63,17 @@ public class PlaylistRESTService implements PlaylistService{
     @GET
     @Path("/getPlayListsByName/{w}/{x}/{y}/{z}")
     @Produces(MediaType.APPLICATION_JSON)
-    public void deleteTracksFromPlaylist(@PathParam("w")String trackPerformer, @PathParam("x")String title, @PathParam("y")String playlistNaam, @PathParam("z")String owner) {
-        Playlist playlist = playlistDAO.findPlaylist(owner, playlistNaam);
-        Track track = playlistDAO.getTrackFromPlaylist(playlist, trackPerformer, title);
-        playlistDAO.deleteTrackFromPlaylist(track, playlist);
+    public void deleteTrackFromPlaylist(@PathParam("w")String trackPerformer, @PathParam("x")String title, @PathParam("y")String playlistNaam, @PathParam("z")String owner) {
+        Playlist list = playlistDAO.findPlaylist(owner, playlistNaam);
+        Track tempTrack = playlistDAO.getTrackFromPlaylist(list, trackDAO.findTrack(trackPerformer, title));
+        playlistDAO.deleteTrackFromPlaylist(tempTrack, list);
     }
 
     @GET
     @Path("/getPlayListsByName/{x}/{y}")
     @Produces(MediaType.APPLICATION_JSON)
     public void deletePlaylist(@PathParam("x")String playlistNaam, @PathParam("y") String owner) {
-        Playlist playlist = playlistDAO.findPlaylist(owner, playlistNaam);
-        playlistDAO.deletePlaylist(playlist);
+        Playlist list = playlistDAO.findPlaylist(owner, playlistNaam);
+        playlistDAO.deletePlaylist(list);
     }
 }
